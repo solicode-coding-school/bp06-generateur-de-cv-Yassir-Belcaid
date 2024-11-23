@@ -1,0 +1,138 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+
+<body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">CV Generator</h1>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="nameField">Name</label>
+                    <input type="text" id="nameField" class="form-control" placeholder=" Full Name">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Phone</label>
+                    <input type="tel" id="contactField" class="form-control" placeholder="06********">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField">Address</label>
+                    <input type="text" id="addressField" class="form-control" placeholder=", city">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="imgField">Select an Image</label>
+                    <input id="imgField" type="file" class="form-control">
+                </div>
+
+                <p class="text-secondary my-3">Important Links</p>
+
+                <div class="form-group mt-2">
+                    <label for="fbField">Facebook</label>
+                    <input type="url" id="fbField" class="form-control" placeholder="FB">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="igField">Instagram</label>
+                    <input type="url" id="igField" class="form-control" placeholder="IG">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="inField">LinkedIn</label>
+                    <input type="url" id="inField" class="form-control" placeholder="IN">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+
+                <div class="form-group">
+                    <label for="objField">Objectives</label>
+                    <textarea id="objField" class="form-control" placeholder="insert here" rows="5"></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea class="form-control weField" placeholder="insert here" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Studies</label>
+                    <textarea class="form-control eqField" placeholder="insert here" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="eqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+    </div>
+
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <img id="imgTemplate" src="download.png" alt="default profile picture" class="img-fluid myimg">
+                <div class="container">
+                    <p id="nameT1">your name</p>
+                    <p id="contactT">your phone number</p>
+                    <p id="addressT">your address</p>
+                    <hr>
+                    <p><a id="fbT" href="#1">https://facebook.com</a></p>
+                    <p><a id="igT" href="#2">https://instagram.com</a></p>
+                    <p><a id="inT" href="#3">https://linkedin.com</a></p>
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <h1 id="nameT2" class="text-center" style="font-weight: 980">Your Name</h1>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objectives</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objT"></p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Studies</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background">Print CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+
+</html>

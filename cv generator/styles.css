@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7abd9b;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h3 {
+    color: #044e04;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn {
+    background-color: #061d5c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    margin-top: 20px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.background {
+    background-color: #e7f1ff;
+}
+
+.myimg {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
